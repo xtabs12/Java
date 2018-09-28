@@ -1,0 +1,470 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Conversion;
+
+/**
+ *
+ * @author RaisenWise
+ */
+public class TemperatureConversion {
+
+//Fahrenheit	[°F] = [°C] × ​9⁄5 + 32          
+//Kelvin	[K] = [°C] + 273.15             
+//Rankine	[°R] = ([°C] + 273.15) × ​9⁄5	
+//Delisle	[°De] = (100 − [°C]) × ​3⁄2	
+//Newton	[°N] = [°C] × ​33⁄100             
+//Réaumur	[°Ré] = [°C] × ​4⁄5              
+//Rømer	[°Rø] = [°C] × ​21⁄40 + 7.5	
+    //To By Celcius
+    public static double CelciustoFahrenheit(double Celcius) //1
+    {
+        //[°F] = [°C] × ​9⁄5 + 3/2
+        double Fahrenheit = (9 / 5) * Celcius + 32;
+        return Fahrenheit;
+    }
+
+    public static double CelciustoReamur(double Celcius) //2
+    {
+        //[°Ré] = [°C] × ​4/5
+        double Reamur = (4 / 5) * Celcius;
+        return Reamur;
+    }
+
+    public static double CelciustoKelvin(double Celcius) //3
+    {
+        //[K] = [°C] + 273.15 
+        double Kelvin = Celcius + 273;
+        return Kelvin;
+    }
+
+    public static double CelciustoDelisle(double Celcius) //4
+    {
+        //[°De] = (100 − [°C]) × ​3/2
+        double Delisle = (100 - Celcius) * (3 / 2);
+        return Delisle;
+    }
+
+    public static double CelciustoNewton(double Celcius) //5
+    {
+        //[°N] = [°C] × ​33/100
+        double Newton = Celcius * (33 / 100);
+        return Newton;
+    }
+
+    public static double CelciustoRankine(double Celcius) //6
+    {
+        //[°R] = ([°C] + 273.15) × ​9/5
+        double Rankine = Celcius + 273.15 * (9 / 5);
+        return Rankine;
+    }
+
+    public static double CelciustoRomer(double Celcius) //7
+    {
+        //[°Rø] = [°C] × ​21 /40 + 7.5
+        double Romer = Celcius * (21 / 40) + 7.5;
+        return Romer;
+    }
+
+// Celsius	[°C] = ([°F] − 32) × ​5⁄9           
+// Kelvin	[K] = ([°F] + 459.67) × ​5⁄9         
+// Rankine	[°R] = [°F] + 459.67            
+// Delisle	[°De] = (212 − [°F]) × ​5⁄6          
+// Newton	[°N] = ([°F] − 32) × ​11⁄60         
+// Réaumur	[°Ré] = ([°F] − 32) × ​4⁄9           
+// Rømer	[°Rø] = ([°F] − 32) × ​7⁄24 + 7.5    
+    //TO By Fahrenheit
+    public static double FahrenheittoCelcius(double Fahrenheit)//1
+    {
+        //[°C] = ([°F] − 32) × ​5/9
+        double Celcius = (Fahrenheit - 32) * (5 / 9);
+        return Celcius;
+    }
+
+    public static double FahrenheittoKelvin(double Fahrenheit)//2
+    {
+        //[K] = ([°F] + 459.67) × ​5/9
+        double Kelvin = (Fahrenheit + 459.67) * (5 / 9);
+        return Kelvin;
+    }
+
+    public static double FahrenheittoRankine(double Fahrenheit)//3
+    {
+        //[°R] = [°F] + 459.67
+        double Rankine = Fahrenheit + 459.67;
+        return Rankine;
+    }
+
+    public static double FahrenheittoDelisle(double Fahrenheit)//4
+    {
+        //[°De] = (212 − [°F]) × ​5/6
+        double Delisle = (212 - Fahrenheit) * (5 / 6);
+        return Delisle;
+    }
+
+    public static double FahrenheittoNewton(double Fahrenheit)//5
+    {
+        //[°N] = ([°F] − 32) × ​11/60
+        double Newton = (Fahrenheit - 32) * (11 / 60);
+        return Newton;
+    }
+
+    public static double FahrenheittoReamur(double Fahrenheit)//6
+    {
+        //[°Ré] = ([°F] − 32) × ​4/9
+        double Reamur = (Fahrenheit - 32) * (4 / 9);
+        return Reamur;
+    }
+
+    public static double FahrenheittoRomer(double Fahrenheit)//7
+    {
+        //[°Rø] = ([°F] − 32) × ​7⁄24 + 7.5
+        double Romer = (Fahrenheit - 32) * (7 / 24) + 7.5;
+        return Romer;
+    }
+
+// Celsius	[°C] = [K] − 273.15	
+// Fahrenheit	[°F] = [K] × ​9⁄5 − 459.67	
+// Rankine	[°R] = [K] × ​9⁄5	
+// Delisle	[°De] = (373.15 − [K]) × ​3⁄2	
+// Newton	[°N] = ([K] − 273.15) × ​33⁄100	
+// Réaumur	[°Ré] = ([K] − 273.15) × ​4⁄5	
+// Rømer	[°Rø] = ([K] − 273.15) × ​21⁄40 + 7.5	
+    //To By Kelvin
+    public static double KelvintoCelcius(double Kelvin)//1
+    {
+        //[°C] = [K] − 273.15
+        double Celcius = Kelvin - 273.15;
+        return Celcius;
+    }
+
+    public static double KelvintoFahrenheit(double Kelvin)//2
+    {
+        //[°F] = [K] × ​9/5 − 459.67
+        double Fahrenheit = Kelvin * (9 / 5) - 459.67;
+        return Fahrenheit;
+    }
+
+    public static double KelvintoRankine(double Kelvin)//3
+    {
+        //[°R] = [K] × ​9/5
+        double Rankine = Kelvin * (9 / 5);
+        return Rankine;
+    }
+
+    public static double KelvintoDelisle(double Kelvin)//4
+    {
+        //[°De] = (373.15 − [K]) × ​3/2
+        double Delisle = (373.15 - Kelvin) * (3 / 2);
+        return Delisle;
+    }
+
+    public static double KelvintoNewton(double Kelvin)//5
+    {
+        //[°N] = ([K] − 273.15) × ​33/100
+        double Newton = (Kelvin - 273.15) * (33 / 100);
+        return Newton;
+    }
+
+    public static double KelvintoReamur(double Kelvin)//6
+    {
+        //[°Ré] = ([K] − 273.15) × ​4/5
+        double Reamur = (Kelvin - 273.15) * (4 / 5);
+        return Reamur;
+    }
+
+    public static double KelvintoRomer(double Kelvin)//7
+    {
+        //[°Rø] = ([K] − 273.15) × ​21/40 + 7.5
+        double Romer = (Kelvin - 273.15) * (21 / 40) + 7.5;
+        return Romer;
+    }
+
+// Celsius	[°C] = ([°R] − 491.67) × ​5⁄9	
+// Fahrenheit	[°F] = [°R] − 459.67	
+// Kelvin	[K] = [°R] × ​5⁄9	
+// Delisle	[°De] = (671.67 − [°R]) × ​5⁄6	
+// Newton	[°N] = ([°R] − 491.67) × ​11⁄60	
+// Réaumur	[°Ré] = ([°R] − 491.67) × ​4⁄9	
+// Rømer	[°Rø] = ([°R] − 491.67) × ​7⁄24 + 7.5	
+    //To By Rankine
+    public static double RankinetoCelcius(double Rankine)//1
+    {
+        //[°C] = ([°R] − 491.67) × ​5/9
+        double Celcius = (Rankine - 491.67) * (5 / 9);
+        return Celcius;
+    }
+
+    public static double RankinetoFahrenheit(double Rankine)//2
+    {
+        //[°F] = [°R] − 459.67
+        double Fahrenheit = Rankine = 459.67;
+        return Fahrenheit;
+    }
+
+    public static double RankinetoKelvin(double Rankine)//3
+    {
+        //[K] = [°R] × ​5/9
+        double Kelvin = Rankine * (5 / 9);
+        return Kelvin;
+    }
+
+    public static double RankinetoDelisle(double Rankine)//4
+    {
+        //[°De] = (671.67 − [°R]) × ​5/6
+        double Delisle = (671.67 - Rankine) * (5 / 6);
+        return Delisle;
+    }
+
+    public static double RankinetoNewton(double Rankine)//5
+    {
+        //[°N] = ([°R] − 491.67) × ​11/60
+        double Newton = (Rankine - 491.67) * (11 / 60);
+        return Newton;
+    }
+
+    public static double RankinetoReamur(double Rankine)//6
+    {
+        //[°Ré] = ([°R] − 491.67) × ​4/9
+        double Reamur = (Rankine - 491.67) * (4 / 9);
+        return Reamur;
+    }
+
+    public static double RankinetoRomer(double Rankine)//7
+    {
+        //Rømer	[°Rø] = ([°R] − 491.67) × 7/24 + 7.5
+        double Romer = (Rankine - 491.67) * (7 / 24) + 7.5;
+        return Romer;
+    }
+
+// Celsius	[°C] = 100 − [°De] × ​2⁄3	
+// Fahrenheit	[°F] = 212 − [°De] × ​6⁄5	
+// Kelvin	[K] = 373.15 − [°De] × ​2⁄3	
+// Rankine	[°R] = 671.67 − [°De] × ​6⁄5	
+// Newton	[°N] = 33 − [°De] × ​11⁄50	
+// Réaumur	[°Ré] = 80 − [°De] × ​8⁄15	
+// Rømer	[°Rø] = 60 − [°De] × ​7⁄20
+    //To By Delisle
+    public static double DelisletoCelcius(double Delisle)// 1
+    {
+        //[°C] = 100 − [°De] × ​2/3
+        double Celcius = 100 - Delisle * (2 / 3);
+        return Celcius;
+
+    }
+
+    public static double DelisletoFahrenheit(double Delisle)// 2
+    {
+        //[°F] = 212 − [°De] × ​6/5
+        double Fahrenheit = 212 - Delisle * (6 / 5);
+        return Fahrenheit;
+
+    }
+
+    public static double DelisletoKelvin(double Delisle)// 3
+    {
+        //[K] = 373.15 − [°De] × ​2/3
+        double Kelvin = 373.15 - Delisle * (2 / 3);
+        return Kelvin;
+
+    }
+
+    public static double DelisletoRankine(double Delisle)// 4
+    {
+        //[°R] = 671.67 − [°De] × ​6/5
+        double Rankine = 671.67 - Delisle * (6 / 5);
+        return Rankine;
+
+    }
+
+    public static double DelisletoNewton(double Delisle)// 5
+    {
+        //[°N] = 33 − [°De] × ​11/50
+        double Newton = 33 - Delisle * (11 / 50);
+        return Newton;
+
+    }
+
+    public static double DelisletoReamur(double Delisle)// 6
+    {
+        //[°Ré] = 80 − [°De] × ​8/15
+        double Reamur = 80 - Delisle * (8 / 15);
+        return Reamur;
+
+    }
+
+    public static double DelisletoRomer(double Delisle)// 7
+    {
+        //[°Rø] = 60 − [°De] × ​7/20
+        double Romer = 60 - Delisle * (7 / 20);
+        return Romer;
+
+    }
+
+// Celsius	[°C] = [°N] × ​100⁄33	
+// Fahrenheit	[°F] = [°N] × ​60⁄11 + 32
+// Kelvin	[K] = [°N] × ​100⁄33 + 273.15	
+// Rankine	[°R] = [°N] × ​60⁄11 + 491.67	
+// Delisle	[°De] = (33 − [°N]) × ​50⁄11	
+// Réaumur	[°Ré] = [°N] × ​80⁄33	
+// Rømer	[°Rø] = [°N] × ​35⁄22 + 7.5	
+    //To By Newton
+    public static double NewtontoCelcius(double Newton)// 1
+    {
+        //[°C] = [°N] × ​100/33
+        double Celcius = Newton * (100 / 33);
+        return Celcius;
+
+    }
+
+    public static double NewtontoFahrenheit(double Newton)// 2
+    {
+        //[°F] = [°N] × ​60/11 + 32
+        double Fahrenheit = Newton * (60 / 11) + 32;
+        return Fahrenheit;
+
+    }
+
+    public static double NewtontoKelvin(double Newton)// 3
+    {
+        //[K] = [°N] × ​100/33 + 273.15
+        double Kelvin = Newton * (100 / 33) + 273.15;
+        return Kelvin;
+
+    }
+
+    public static double NewtontoRankine(double Newton)// 4
+    {
+        //[°R] = [°N] × ​60/11 + 491.67
+        double Rankine = Newton * (60 / 11) + 491.67;
+        return Rankine;
+
+    }
+
+    public static double NewtontoDelisle(double Newton)// 5
+    {
+        //[°De] = (33 − [°N]) × ​50/11
+        double Delisle = (33 - Newton) * (50 / 11);
+        return Delisle;
+
+    }
+
+    public static double NewtontoReamur(double Newton)// 6
+    {
+        //[°Ré] = [°N] × ​80/33
+        double Reamur = Newton * (80 / 33);
+        return Reamur;
+
+    }
+
+    public static double NewtontoRomer(double Newton)// 7
+    {
+        //[°Rø] = [°N] × ​35/22 + 7.5	
+        double Romer = Newton * (35 / 22) + 7.5;
+        return Romer;
+
+    }
+
+// Celsius      [°C] = [°Ré] × ​5⁄4	
+// Fahrenheit	[°F] = [°Ré] × ​9⁄4 + 32	
+//Kelvin        [K] = [°Ré] × ​5⁄4 + 273.15	
+//Rankine       [°R] = [°Ré] × ​9⁄4 + 491.67
+//Delisle       [°De] = (80 − [°Ré]) × ​15⁄8
+//Newton        [°N] = [°Ré] × ​33/80
+//Rømer         [°Rø] = [°Ré] × ​21⁄32 + 7.5
+    //TO By Reamur
+    public static double ReamurtoCelcius(double Reamur) {
+        //[°C] = [°Ré] × ​5/4
+        double Celcius = Reamur * (5 / 4);
+        return Celcius;
+    }
+
+    public static double ReamurtoFahrenheit(double Reamur) {
+        //[°F] = [°Ré] × ​9/4 + 32	
+        double Fahrenheit = Reamur * (9 / 4) + 32;
+        return Fahrenheit;
+    }
+
+    public static double ReamurtoKelvin(double Reamur) {
+        //[K] = [°Ré] × ​5/4 + 273.15	
+        double Kelvin = Reamur * (5 / 4) + 273.15;
+        return Kelvin;
+    }
+
+    public static double ReamurtoRankine(double Reamur) {
+        //[°R] = [°Ré] × ​9/4 + 491.67
+        double Rankine = Reamur * (9 / 4) + 491.67;
+        return Rankine;
+    }
+
+    public static double ReamurtoDelisle(double Reamur) {
+        //[°De] = (80 − [°Ré]) × ​15/8
+        double Delisle = (80 - Reamur) * (15 / 8);
+        return Delisle;
+    }
+
+    public static double ReamurtoNewton(double Reamur) {
+        //[°N] = [°Ré] × ​33/80
+        double Newton = Reamur * (33 / 80);
+        return Newton;
+    }
+
+    public static double ReamurtoRomer(double Reamur) {
+        //[°Rø] = [°Ré] × ​21/32 + 7.5
+        double Romer = Reamur * (22 / 32) + 7.5;
+        return Romer;
+    }
+
+//Celsius	[°C] = ([°Rø] − 7.5) × ​40⁄21	
+//Fahrenheit	[°F] = ([°Rø] − 7.5) × ​24⁄7 + 32	
+//Kelvin	[K] = ([°Rø] − 7.5) × ​40⁄21 + 273.15	
+//Rankine	[°R] = ([°Rø] − 7.5) × ​24⁄7 + 491.67	
+//Delisle	[°De] = (60 − [°Rø]) × ​20⁄7	
+//Newton	[°N] = ([°Rø] − 7.5) × ​22⁄35	
+//Réaumur	[°Ré] = ([°Rø] − 7.5) × ​32⁄21	
+    //To By Romer
+    public static double RomertoCelsius(double Romer) {
+        //[°C] = ([°Rø] − 7.5) × ​40/21
+        double Celsius = (Romer - 7.5) * (40 / 21);
+        return Celsius;
+    }
+
+    public static double RomertoFahrenheit(double Romer) {
+        //[°F] = ([°Rø] − 7.5) × ​24/7 + 32	
+        double Fahrenheit = (Romer - 7.5) * (24 / 7) + 32;
+        return Fahrenheit;
+    }
+
+    public static double RomertoKelvin(double Romer) {
+        //[K] = ([°Rø] − 7.5) × ​40/21 + 273.15
+        double Kelvin = (Romer - 7.5) * (40 / 21) + 273.15;
+        return Kelvin;
+    }
+
+    public static double RomertoRankine(double Romer) {
+        //[°R] = ([°Rø] − 7.5) × ​24/7 + 491.67
+        double Rankine = (Romer - 7.5) * (24 / 7) + 491.67;
+        return Rankine;
+    }
+
+    public static double RomertoDelisle(double Romer) {
+        //[°De] = (60 − [°Rø]) × ​20/7	
+        double Delisle = (60 - Romer) * (20 / 7);
+        return Delisle;
+    }
+
+    public static double RomertoNewtonNewton(double Romer) {
+        //[°N] = ([°Rø] − 7.5) × ​22/35
+        double Newton = (Romer - 7.5) * (22 / 35);
+        return Newton;
+    }
+
+    public static double RomertoReaumur(double Romer) {
+        //[°Ré] = ([°Rø] − 7.5) × ​32/21	
+        double Reamur = (Romer - 7.5) * (32 / 21);
+        return Reamur;
+    }
+
+}
