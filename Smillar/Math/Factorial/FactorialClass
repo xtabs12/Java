@@ -1,9 +1,10 @@
 package Factorial;
 
-/*
+import java.math.BigInteger;
+
+/**
  *
  * @author J.A Ginting
- * 
  */
 public class Factorial {
 
@@ -22,6 +23,20 @@ public class Factorial {
         int Result = 1;
         for (int i = 0; i < a; i++) {
             Result = (a - i) * Result;
+        }
+        return Result;
+    }
+
+    public static BigInteger BigIntegers(int a) {
+        BigInteger Result = BigInteger.valueOf(1);
+        BigInteger B;
+        BigInteger C;
+        BigInteger D;
+        for (int i = 0; i < a; i++) {
+            B = BigInteger.valueOf(a);
+            C = BigInteger.valueOf(i);
+            D = B.subtract(C);
+            Result = D.multiply(Result);
         }
         return Result;
     }
