@@ -1,0 +1,29 @@
+package Factorial;
+
+/*
+ *
+ * @author J.A Ginting
+ * 
+ */
+public class Factorial {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static double Double(double a) {
+        double Result = 1;
+        for (int i = 0; i < a; i++) {
+            Result = (a - i) * Result;
+        }
+        return Result;
+    }
+
+    public static int Integer(int a) {
+        int Result = 1;
+        for (int i = 0; i < a; i++) {
+            Result = (a - i) * Result;
+        }
+        return Result;
+    }
+
+}
